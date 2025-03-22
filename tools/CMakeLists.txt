@@ -1,5 +1,5 @@
 add_executable(hmm hmm.cpp)
-target_link_libraries(hmm PRIVATE hmm::libhmm)
+target_link_libraries(hmm PRIVATE hmm::libhmm PkgConfig::libedit)
 
 # Install the the default binary directory
 include(GNUInstallDirs)
