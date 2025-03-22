@@ -9,7 +9,9 @@ set_target_properties(
 target_compile_features(libhmm PUBLIC cxx_std_20)
 
 target_include_directories(
-  libhmm
-  PRIVATE include
-  PUBLIC ${CMAKE_SOURCE_DIR}/include
+  PUBLIC
+    $<INSTALL_INTERFACE:include>
+    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR/include}
+  PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
 )
